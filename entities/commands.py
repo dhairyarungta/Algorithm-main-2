@@ -62,7 +62,7 @@ def parse(commands):
                 #     parsed_commands.append(f"BACKWARD {hypotenuse}")
                 # parsed_commands += [f"ROTATE {90 - angle}"]
 
-            elif clauses[0]="BACKWARD" and (clauses[2]=="RIGHT" or clauses[2]=="RI"):
+            elif clauses[0]=="BACKWARD" and (clauses[2]=="RIGHT" or clauses[2]=="RI"):
                 parsed_commands += [f"BACKWARD {a}"]
                 parsed_commands += ["ROTATE -90"]
                 parsed_commands += [f"BACKWARD {b}"]
