@@ -152,7 +152,7 @@ class Turn_Simulator:
                 padding = 0
             
             #print(padding)
-            if not self.collision_detector.checkStateIsValid(intermediate_state, padding) :
+            if not self.collison_detector.checkStateIsValid(intermediate_state, padding) :
                 # print(intermediate_state.x, intermediate_state.y)
                 return False, None
             

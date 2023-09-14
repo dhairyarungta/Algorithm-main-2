@@ -63,7 +63,7 @@ class Graph:
             
         return min_path_sequence
 
-    def neartestNeighbour(self,):
+    def nearestNeighbour(self,):
         S = self.carNode
         path_sequence = [S]
         traversed = {}
