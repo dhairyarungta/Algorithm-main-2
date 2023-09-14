@@ -45,4 +45,46 @@ class Graph:
 
         nodeList = []
         for item in self.graph:
+            if self.nodeMap[item]!= self.carNode and item!=self.carNode.key:
+                nodeList.append(self.nodeMap[item])
             
+        minPathCost = float("inf")
+        min_path_sequence = None 
+
+        for path_sequence in list(permutations(nodeList)):
+            pathCost = 0
+            path_sequence  = [self.carNode]+list(path_sequence)
+            for i in range (1, len(path_sequence)):
+                pathCost +=self._calc_dist(paht_sequence[i-1], path_sequence[i])
+            
+            if pathCost<minPathCost:
+                minPathCost = pathCost
+                min_path_sequence = path_sequence
+            
+        return min_path_sequence
+
+    def neartestNeighbour(self,):
+        S = self.carNode
+        path_sequence = [S]
+        traversed = {}
+
+        for item in self.graph:
+            traversed[item]=  0
+        
+        traversed[S.key] = 1
+
+        for i in range (len(self.graph)-1):
+            nearestNode = None
+            MIN_EDGE = float("inf")
+            for edge in self.graph[S.key]:
+                if edge.weight <MIN_EDGE and traversed [edge.dest.key]==0
+                    MIN_EDGE = edge.weight
+                    nearestNode= edge.dest
+            
+
+            S = nearestNode
+            traversed[S.key] =1
+            path_sequence.append(S)
+
+        return path_sequence
+    
