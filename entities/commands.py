@@ -40,7 +40,7 @@ def parse(commands):
                      parsed_commands+=["ROTATE 90"]
 
 
-            elif clauses[0] == "FORWARD" and (clauses[2]=="LEFT" or classes[2]=="LE"):
+            elif clauses[0] == "FORWARD" and (clauses[2]=="LEFT" or clauses[2]=="LE"):
                 if clauses[1] == "TURN":
                     parsed_commands +=[f"FORWARD {b}"]  
                     parsed_commands +=["ROTATE -90"]

@@ -55,7 +55,7 @@ class Graph:
             pathCost = 0
             path_sequence  = [self.carNode]+list(path_sequence)
             for i in range (1, len(path_sequence)):
-                pathCost +=self._calc_dist(paht_sequence[i-1], path_sequence[i])
+                pathCost +=self._calc_dist(path_sequence[i-1], path_sequence[i])
             
             if pathCost<minPathCost:
                 minPathCost = pathCost
