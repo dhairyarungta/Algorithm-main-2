@@ -77,7 +77,7 @@ class Graph:
             nearestNode = None
             MIN_EDGE = float("inf")
             for edge in self.graph[S.key]:
-                if edge.weight <MIN_EDGE and traversed [edge.dest.key]==0
+                if edge.weight <MIN_EDGE and traversed [edge.dest.key]==0:
                     MIN_EDGE = edge.weight
                     nearestNode= edge.dest
             
