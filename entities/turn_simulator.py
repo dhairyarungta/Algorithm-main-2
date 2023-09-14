@@ -12,7 +12,7 @@ class Turn_Simulator:
         self.ellipse_a, self.ellipse_b = TR["90 Turn"]
         self.collison_detector = collision_detector
 
-    def _returnMeta (self, currentNode:Node, turn_where="forward-right")
+    def _returnMeta (self, currentNode:Node, turn_where="forward-right"):
         
         x, y, theta =currentNode.x, currentNode.y, currentNode.theta
         st, dir = turn_where.split("-")
