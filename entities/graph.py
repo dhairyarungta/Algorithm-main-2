@@ -34,4 +34,15 @@ class Graph:
             print(f"Waypoint of {obs.key}:{posX}, {posY}, {theta}")
         
         for i in range (len(nodeList)):
+            self.nodeMap[nodeList[i].key] = nodeList[i]
+
+            for j in range (i+1, len(nodeList)):
+                self._addEdge(nodeList[i], nodeList[j])
+                self._addEdge(nodeList[j], nodeList[i])
+
+    def bruteforce(self,):
+        # find all permutations and find the shortest one
+
+        nodeList = []
+        for item in self.graph:
             
